@@ -1,0 +1,3265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>중앙선거관리위원회 선거통계시스템</title>
+    <script type="text/javascript" src="/common/js/jquery/jquery-1.12.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/common/css/base_v2.css" />
+    <link rel="stylesheet" type="text/css" href="/common/css/submains_v2.css" />
+    <script type="text/javascript" src="/common/js/submains.js?ver=211201"></script>
+    <script type="text/javascript">
+        var RBtnRemoveList = ["HWP"];
+    </script>
+    <script type="text/javascript" src="/common/js/search.js" charset="utf-8"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/common/js/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+    <link type="text/css" rel="stylesheet" href="/common/css/jquery.Placeholders.monkey.patch.min.css" />
+    <script type="text/javascript" src="/common/js/placeholders.min.js"></script>
+    <script type="text/javascript" src="/common/js/jquery.Placeholders.monkey.patch.min.js"></script>
+    <script type="text/javascript">var underIE = true;</script>
+    <![endif]-->
+
+</head>
+<body class="bg">
+<div id="skipNav">
+    <a href="#header">상단 메뉴 바로가기</a>
+    <a href="#container">컨텐츠로 바로가기</a>
+</div>
+<div id="wrapper">
+    <div class="w_inner">
+
+        <div style="display:none;"></div>
+
+
+
+
+
+        <div id="header">
+
+            <div class="top_section">
+                <h1><a href="/main/main_load.xhtml" title="중앙선거관리위원회 선거통계시스템 홈으로 가기"><span>중앙선거관리위원회 선거통계시스템</span></a></h1>
+
+                <ul class="select_election sec">
+                    <li class="eleft"><a href="#" class="on"><span>최근선거</span></a></li>
+                    <li class="eright"><a href="/main/main_previous_load.xhtml"><span>역대선거</span></a></li>
+                </ul>
+                <ul class="t_search" >
+                    <li class="tit"><a href="/search/searchCandidate.xhtml" >통합검색</a></li>
+
+                    <li><input type="text" id="searchKeyword" class="search_input krinput" onkeypress="if(event.keyCode == 13){fn_commonSearch();return false;}" maxlength="30" placeholder="(예비)후보자 성명 입력" /></li>
+                    <li><a href="#" onclick="javascript:fn_commonSearch();" class="btn_t_search searchBtn">검색</a></li>
+                </ul>
+
+
+                <div class="s_election" id="s_election">
+                    <div class="p_top">
+                        <h4>선거선택</h4>
+                        <p><a class="cbtn" href="#"><span>닫기</span></a></p>
+                    </div>
+                    <div class="p_body">
+                        <ul>
+
+
+                            <li><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI">제20대 대통령선거</a></li>
+
+
+
+                            <li><a href="/main/showDocument.xhtml?electionId=0020220601&topMenuId=BI">제8회 전국동시지방선거</a></li>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="gnb">
+                <div class="tit_elect">
+
+
+
+
+                    <p class="date">2022년 3월 9일</p>
+                    <p class="title">제20대 대통령선거</p>
+                </div>
+                <div id="menu">
+
+
+                    <ul class="submu">
+
+
+
+
+
+                        <li>
+                            <a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI" class="m_BI ">
+                                <span>기본현황</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=CP" class="m_CP ">
+                                <span>후보자</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=EC" class="m_EC ">
+                                <span>선거운동</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC" class="m_VC on">
+                                <span>투·개표</span>
+                            </a>
+                        </li>
+
+
+
+
+
+
+
+                        <li>
+                            <a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=EP" class="m_EP ">
+                                <span>당선인</span>
+                            </a>
+                        </li>
+
+
+
+
+
+                    </ul>
+
+                </div>
+
+
+                <div id="allmenu" class="allmenu" style="display:none">
+                    <h3>전체메뉴보기</h3>
+                    <div class="a_inner">
+                        <div class="allview">
+                            <ul>
+
+
+                                <li>
+                                    <dl>
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI&secondMenuId=BIES01">선거일정</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI&secondMenuId=BIGI04">위원회주소</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI&secondMenuId=BIGI05">선거구 및 읍면동현황</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI&secondMenuId=BIPB02">선거인명부 확정상황</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI&secondMenuId=BIAP01">사전투표소 현황</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI&secondMenuId=BIPP01">선거일투표소 현황</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=BI&secondMenuId=BICP01">개표소 현황</a></dd>
+
+
+
+
+
+                                    </dl>
+                                </li>
+
+                                <li>
+                                    <dl>
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=CP&secondMenuId=CPRI01">후보자 등록수</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=CP&secondMenuId=CPRI03">후보자 명부</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=CP&secondMenuId=CPRI05">사퇴/사망/등록무효</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=CP&secondMenuId=CPRI06">후보자 통계</a></dd>
+
+
+
+
+
+                                    </dl>
+                                </li>
+
+                                <li>
+                                    <dl>
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=EC&secondMenuId=ECEO01">정당선거사무소  설치내역</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=EC&secondMenuId=ECEE01">후보자 선거운동기구 설치내역</a></dd>
+
+
+
+
+
+                                    </dl>
+                                </li>
+
+                                <li>
+                                    <dl>
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCAP01">사전투표진행상황</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCVP01">투표진행상황</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCCP09">개표진행상황</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCCP08">개표단위별 개표결과</a></dd>
+
+
+
+
+
+                                    </dl>
+                                </li>
+
+                                <li>
+                                    <dl>
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=EP&secondMenuId=EPEI01">당선인 명부</a></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <dd><a href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=EP&secondMenuId=EPEI03">당선인 통계</a></dd>
+
+
+
+
+
+                                    </dl>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="selSecondMenu">
+                    <ul class="selSubmu">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <li><a  href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCAP01">사전투표진행상황</a></li>
+
+                        <li><a  href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCVP01">투표진행상황</a></li>
+
+                        <li><a  href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCCP09">개표진행상황</a></li>
+
+                        <li><a class="on" href="/main/showDocument.xhtml?electionId=0020220309&topMenuId=VC&secondMenuId=VCCP08">개표단위별 개표결과</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="pop" style="width: 500px; height: 400px; position: absolute; border: 1px solid rgb(217, 217, 217); background-color: rgb(255, 255, 255); left: 451.5px; top: 90px; display:none" onmousedown="startDrag(event, this)">
+            <div id="pop_title" class="title"><h3 align="center" style="margin: 0; padding: 10px; background-color:#2e3d64; color: #fff;">공지사항</h3></div>
+            <div id="pop_main" style="padding: 20px;">
+                <p style="font-size:25px;">정보시스템 일시 중단 안내<br><br></p>
+                <p style="font-size:16px;">제20대 대통령선거 대비 안정적 서비스를 위한 <br />"서버등 점검작업"수행에 따라 아래와 같이 사이트가 <br />일시 중단됨을 알려드립니다.<br><br></p>
+                <p style="font-size:16px;">☞중단기간<br><br>2021.11.12.(금) 19:00 ~ 11.13.(토) 03:00<br></p>
+            </div>
+            <div id="pop_close" style="position:absolute; left:0; right: 0; bottom: 0; padding: 10px; background-color:#555; color: #fff;">
+                <div style="text-align:left">
+                    <input type="checkbox" id="todayClose" class="todayClose">
+                    <label for="todayClose">오늘하루 그만보기</label>
+                    <input style="font-size: 13px; background-color: #555; color: white; padding-top: 2px; float:right;" type="button" id="buttonClose" class="buttonClose" value="창닫기" onclick="javascript:checkedFunc();">
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+
+            $(function(){
+
+                var electionId = "0020220309";
+
+
+                var secondMenuId = "VCCP08";
+
+
+                var menuId = [];
+
+
+                if(menuId.length > 0){
+                    for(var i=0; i <= menuId.length; i++){
+                        if(menuId[i] == secondMenuId){
+                            if (getCookie("subNoticePop") != "done") {
+
+                                popupOpen();
+                            }
+                        }
+                    }
+                }
+            });
+
+
+
+            function popupOpen() {
+                var width = $(window).width();
+                var height = $(window).height();
+
+                $('#pop').css("z-index", "9999");
+                $('#pop').css("position", "absolute");
+                $('#pop').css("border", "1px solid #d9d9d9");
+                $('#pop').css("background-color", "#fff");
+                $('#pop').css({'left':(width - 500 )/2, 'top':(height - 500 )/2 });
+                $('#pop').show();
+            }
+
+
+            var img_L = 0;
+            var img_T = 0;
+            var targetObj;
+
+            function getLeft(o) {
+                return parseInt(o.style.left.replace('px', ''));
+            }
+
+            function getTop(o) {
+                return parseInt(o.style.top.replace('px', ''));
+            }
+
+            function moveDrag(e) {
+                var e_obj = window.event? window.event : e;
+                var dmvx = parseInt(e_obj.clientX + img_L);
+                var dmvy = parseInt(e_obj.clientY + img_T);
+
+                targetObj.style.left = dmvx+"px";
+                targetObj.style.top = dmvy+"px";
+                return false;
+            }
+
+            function startDrag(e, obj){
+                targetObj = obj;
+                var e_obj = window.event? window.event : e;
+
+                img_L = getLeft(obj) - e_obj.clientX;
+                img_T = getTop(obj) - e_obj.clientY;
+
+                document.onmousemove = moveDrag;
+                document.onmouseup = stopDrag;
+                if(e_obj.preventDefault)e_obj.preventDefault();
+            }
+
+            function stopDrag() {
+                document.onmousemove = null;
+                document.onmouseup = null;
+            }
+
+
+            function getCookie(name) {
+                var nameOfCookie = name + "=";
+                var x = 0;
+                while (x <= document.cookie.length) {
+                    var y = (x + nameOfCookie.length);
+                    if (document.cookie.substring(x, y) == nameOfCookie) {
+                        if ((endOfCookie = document.cookie.indexOf(";", y)) == -1)
+                            endOfCookie = document.cookie.length;
+                        return unescape(document.cookie.substring(y, endOfCookie));
+                    }
+                    x = document.cookie.indexOf(" ", x) + 1;
+                    if (x == 0)
+                        break;
+                }
+                return "";
+            }
+
+            function setCookie(name, value, expiredays) {
+                var todayDate = new Date();
+                todayDate.setDate(todayDate.getDate() + expiredays);
+                document.cookie = name + "=" + escape(value) + "; path=/; expires="	+ todayDate.toGMTString() + ";";
+            }
+
+
+            var checkedFunc = function() {
+                var todayCheck = document.getElementById('todayClose');
+                if (todayCheck.checked) {
+                    setCookie("subNoticePop", "done", 1);
+                    $('#pop').hide();
+                } else {
+                    $('#pop').hide();
+                }
+            };
+
+        </script><style type="text/css" media="all" title="default">@import "/common/css/base_v2.css";</style>
+
+        <script type="text/javascript" charset="utf-8" src="/common/js/jquery/jquery-1.12.1.min.js" ></script>
+        <script type="text/javascript" charset="utf-8" src="/common/js/jquery/jquery.blockUI.js" ></script>
+        <script type="text/javascript" charset="utf-8" src="/common/js/jquery/jquery.jsonUtil.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/common/js/electioncommon.js?ver=211206"></script>
+        <script type="text/javascript" charset="utf-8" src="/ubi4/js/ubi.js"></script>
+        <script type="text/javascript">
+            //<[CDATA[
+            var DOC = {ROOT : ''};
+            var previousCityCode = '1100';
+            var previousTownCode = '1101';
+            var previousSggCityCode = '-1';
+            var previousSggTownCode = '-1';
+
+
+
+            var RBtnRemoveList = ["HWP","엑셀","PDF"];
+
+
+
+            $(document).ready(function(){
+                setSubTitle();
+                settingYN();
+
+
+                if ('' != 'true') {
+                    changCityCodeSelectBox('1');
+                }
+
+
+                $('#searchForm').submit(chooseStatementId);
+                $('.electionType').click(changeElectionCode);
+                $('#cityCode').change(changeCityCode);
+                $('#sggCityCode').change(changeSggCityCode);
+                $('#townCodeFromSgg').change(settingYN);
+                $('#townCode').change(changeTwCode);
+                $('#sggTownCode').change(settingYN);
+
+            });
+
+
+            function setSubTitle() {
+                if ($('#electionCode').val() > 0 ) {
+                    $('#electionName').html(retrieveSelectedName('electionCode'));
+                }
+                if ($('#cityCode').val() > 0) {
+                    $('#cityName').html(retrieveSelectedName('cityCode'));
+                }
+                if ($('#townCode').val() > 0) {
+                    $('#townName').html(retrieveSelectedName('townCode'));
+                }
+                if ($('#sggCityCode').val() > 0) {
+                    $('#sggCityName').html(retrieveSelectedName('sggCityCode'));
+                }
+                if ($('#sggTownCode').val() > 0) {
+                    $('#sggTownName').html(retrieveSelectedName('sggTownCode'));
+                }
+                if ($('#townCodeFromSgg').val() > 0) {
+                    $('#townNameFromSgg').html(retrieveSelectedName('townCodeFromSgg'));
+                }
+            }
+
+
+            function changeElectionCode(e) {
+
+                changCityCodeSelectBox($('#electionCode').val());
+
+
+                $('#cityCode').val(-1);
+                $('#townCode').val(-1);
+                $('#sggCityCode').val(-1);
+                $('#sggTownCode').val(-1);
+                previousCityCode = -1;
+                previousSggCityCode = -1;
+                previousTownCode = -1;
+                previousSggTownCode = -1;
+                changeSelectBox();
+            }
+
+
+            function changeCityCode(e){
+                $('#sggCityCode').val(-1);
+                $('#townCode').val(-1);
+                $('#sggTownCode').val(-1);
+                previousCityCode = -1;
+                previousSggCityCode = -1;
+                previousTownCode = -1;
+                previousSggTownCode = -1;
+                changeSelectBox();
+            }
+
+
+            function changeSggCityCode(e){
+                $('#townCodeFromSgg').val(-1);
+                previouseTownCodeFromSgg = -1;
+                changeSelectBox();
+            }
+
+
+
+            function changeTwCode(e){
+                $('#sggTownCode').val(-1);
+                previousSggTownCode = -1;
+
+                if($('#electionCode').val() == 1 || $('#electionCode').val() == 7)
+                    settingYN();
+                else
+                    changeSelectBox();
+            }
+
+
+            function changeTownCode(e){
+                $('#sggTownCode').val(-1);
+                previousSggTownCode = -1;
+                changeSelectBox();
+            }
+
+
+            function changeSelectBox(){
+                var electionId = $('#electionId').val();
+                var electionCode = $('#electionCode').val();
+                var cityCode = $('#cityCode').val();
+                var sggCityCode = $('#sggCityCode').val();
+                var townCode = $('#townCode').val();
+
+                if( electionCode == 1 || electionCode == 3 || electionCode == 7 || electionCode == 8 || electionCode == 11 ){
+                    if(cityCode > 0 && townCode == -1){
+                        checkPreviousCityCodeForTownCode(electionId, cityCode);
+                    }
+                } else if ( electionCode == 10 ) {
+                    if(cityCode > 0){
+                        if(previousCityCode == undefined){
+                            previousCityCode = cityCode;
+                        }
+
+                        if(sggCityCode > 0){
+                            checkPreviousSggCityCodeForTownCodeFromSgg(electionId, electionCode, sggCityCode);
+                            previousSggCityCode = sggCityCode;
+                        }
+
+                        if(previousCityCode == -1)
+                            checkPreviousCityCodeForSggCityCode(electionId, electionCode, cityCode);
+                    }
+                } else if( electionCode == 2 || electionCode == 4 || electionCode == 9 ){
+                    if(cityCode > 0){
+                        if(previousCityCode == undefined){
+                            previousCityCode = cityCode;
+                        }
+
+                        if(previousCityCode == -1)
+                            checkPreviousCityCodeForSggCityCode(electionId, electionCode, cityCode);
+
+                        if(sggCityCode > 0){
+                            checkPreviousSggCityCodeForTownCodeFromSgg(electionId, electionCode, sggCityCode);
+                        }
+                    }
+                } else if ( electionCode == 5 || electionCode == 6 ) {
+                    if(cityCode > 0){
+                        //checkPreviousCityCodeForTownCode(electionId, cityCode);
+                        if(townCode > 0){
+                            checkPreviousTownCodeForSggTownCodeForGp(electionId, electionCode, townCode);
+                        } else {
+                            // 21대 국회의원선거 한정으로 사용한다. 개표단위별 개표 결과에서 전주시 덕진구를 표시하기위해 사용
+                            checkPreviousCityCodeForTownCodeBySgForGp(electionId, electionCode, cityCode);
+                        }
+                    }
+                }
+                settingYN();
+            }
+
+
+            function settingYN(e) {
+                var electionId = $('#electionId').val();
+                var electionCode = $('#electionCode').val();
+                var cityCode = $('#cityCode').val();
+                var sggCityCode = $('#sggCityCode').val();
+                var townCodeFromSgg =$('#townCodeFromSgg').val();
+                var townCode = $('#townCode').val();
+                var sggTownCode = $('#sggTownCode').val();
+
+                if( electionCode == 1 || electionCode == 3 || electionCode == 7 || electionCode == 8 || electionCode == 11 ){
+                    if (cityCode >= 0) {
+                        if(townCode >=0 ){
+                            selectBoxShow("","none", "none", "", "none", "");
+                        } else {
+                            selectBoxShow("","none", "none", "", "none", "none");
+                        }
+                    }else {
+                        selectBoxShow("","none", "none", "none", "none", "none");
+                    }
+                } else if( electionCode == 10 ){
+                    var townCodeFromSggLength = $('#townCodeFromSgg').find('option').length;
+
+                    if(townCodeFromSggLength > 2 || electionCode == 10){
+                        if(cityCode >= 0){
+                            if(sggCityCode >= 0){
+                                if(townCodeFromSgg >= 0){
+                                    selectBoxShow("","", "", "none", "none", "");
+                                } else {
+                                    selectBoxShow("","", "", "none", "none", "none");
+                                }
+                            } else {
+                                selectBoxShow("","", "none", "none", "none", "none");
+                            }
+                        } else {
+                            selectBoxShow("","none", "none","none", "none", "none");
+                        }
+                    }else{
+
+                        if(cityCode >= 0){
+                            if(sggCityCode >= 0){
+                                selectBoxShow("","", "none", "none", "none", "");
+                            }else{
+                                selectBoxShow("","", "none", "none", "none", "none");
+                            }
+                        }else{
+                            selectBoxShow("","none", "none", "none", "none", "none");
+                        }
+                    }
+                } else if( electionCode == 2 || electionCode == 4 || electionCode == 9 ){
+                    if(cityCode >= 0){
+                        if(sggCityCode >= 0){
+                            if(townCodeFromSgg >= 0){
+                                selectBoxShow("", "", "","none", "none", "");
+                            } else {
+                                selectBoxShow("", "", "","none", "none", "none");
+                            }
+                        } else {
+                            selectBoxShow("", "", "none","none", "none", "none");
+                        }
+                    } else {
+                        selectBoxShow("","none", "none", "none", "none", "none");
+                    }
+                } else if( electionCode == 5 || electionCode == 6 ){
+                    if(cityCode >= 0){
+// 				if( ( townCode == -1 || townCode == null || townCode == '' ) &&  previousTownCode > -1 ){
+// // 					$('#townCode').val(previousTownCode);
+// 					townCode = previousTownCode;
+// 				}
+
+// 				if( ( sggTownCode == -1 || sggTownCode == null || sggTownCode == '' ) &&  previousSggTownCode > -1 ){
+// // 					$('#sggTownCode').val(previousSggTownCode);
+// 					sggTownCode = previousSggTownCode;
+// 				}
+
+                        if(townCode >= 0){
+                            if(sggTownCode >= 0){
+                                selectBoxShow("","none","none", "", "", "");
+                            } else {
+                                selectBoxShow("","none","none", "", "", "none");
+                            }
+                        } else {
+                            selectBoxShow("","none","none", "", "none", "none");
+                        }
+                    } else {
+                        selectBoxShow("","none","none", "none", "none", "none");
+                    }
+                } else {
+                    selectBoxShow("none","none","none", "none", "none", "none");
+                }
+
+                if(electionCode >= 0){
+                    $('#wub_select').css('display','');
+                }
+            }
+
+
+            function selectBoxShow(citySpanStyle, sggCitySpanStyle, townCodeFromSggSpanStyle, townSpanStyle, sggTownSpanStyle, submitSpanStyle) {
+                $('#spanCityCode').css('display', citySpanStyle);
+                $('#spanSggCityCode').css('display', sggCitySpanStyle);
+                $('#spanTownCodeFromSgg').css('display', townCodeFromSggSpanStyle);
+                $('#spanTownCode').css('display', townSpanStyle);
+                $('#spanSggTownCode').css('display', sggTownSpanStyle);
+                $('#spanSubmit').css('display', submitSpanStyle);
+            }
+
+
+            function chooseStatementId() {
+                var statementId = "";
+                var electionCode = $('#electionCode').val();
+                var sggTownCode = $('#sggTownCode').val();
+                var sggCityCode = $('#sggCityCode').val();
+
+
+                switch (electionCode)
+                {
+                    case "1":  statementId = "VCCP08_#1";  break;
+                    case "2":
+                        if(sggCityCode == "2112201"){
+                            //20대 대선 기준 국회의원선거 서초구 재보궐선거로 관내사전투표 선거구별로 함
+                            statementId = "VCCP08_#2_1_SGG";
+                            break;
+
+                        }else{
+                            // VCCP08_#2_1: 국외 투표 용지를 못받는 상황의 경우 국외에서 개표할 경우 공관 개표 결과를 추가함, 원래는 VCCP08_#2
+                            statementId = "VCCP08_#2_1";
+                            break;
+                        }
+                    case "3":  statementId = "VCCP08_#3";  break;
+                    case "4":  statementId = "VCCP08_#4";  break;
+                    //시도의원(광역의원) : 관내사전 개표 (읍면동별 : VCCP08_#5, 선거구별 : VCCP08_#5_SGG):
+                    case "5":
+                        // 강북구,의령군은 선거구별
+                        if (sggTownCode == "5110901" || sggTownCode == "5481101"){
+                            statementId = "VCCP08_#5_SGG";
+                            break;
+
+                        }else{
+                            statementId = "VCCP08_#5";
+                            break;
+                        }
+                    //구시군의원(기초의원) : 관내사전 개표 (읍면동별 : VCCP08_#6, 선거구별 : VCCP08_#6_SGG)
+                    case "6":
+                        // 영등포구바,송파구라,의령군다는 선거구별
+                        if (sggTownCode == "6111906" || sggTownCode == "6112404" || sggTownCode == "6481103"){
+                            statementId = "VCCP08_#6_SGG";
+                            break;
+
+                        }else{
+                            statementId = "VCCP08_#6";
+                            break;
+                        }
+                    case "7":  statementId = "VCCP08_#7_1";  break;  // VCCP08_#7_1: 국외 투표 용지를 못받는 상황의 경우 국외에서 개표할 경우 공관 개표 결과를 추가함, 원래는 VCCP08_#7
+                    case "8":  statementId = "VCCP08_#8";  break;
+                    case "9":  statementId = "VCCP08_#9";  break;
+                    case "10": statementId = "VCCP08_#10"; break;
+                    case "11": statementId = "VCCP08_#11"; break;
+                    default: break;
+                }
+
+
+                $('#statementId').val(statementId);
+            }
+
+
+            function changCityCodeSelectBox(electionCode) {
+                var electionId = '0020220309';
+
+                if(previousCityCode > 0)
+                    checkPreviousCityCodeForSgCode(electionId, electionCode, previousCityCode);
+
+            }
+
+            function setElectionCode(code){
+                $('#wub_select').css('display', '');
+
+                if(1 == code){
+                    $('#electionId'+1).addClass('on');
+                }else{
+                    $('#electionId'+1).removeClass('on');
+                };
+
+                if(2 == code){
+                    $('#electionId'+2).addClass('on');
+                }else{
+                    $('#electionId'+2).removeClass('on');
+                };
+
+
+                $('#electionCode').val(code);
+
+                checkPreviousCityCodeForSgCode($('#electionId').val(), $('#electionCode').val(), '-1');
+
+                $('#cityCode').val(-1);
+                settingYN();
+            }
+            //]]>
+        </script>
+
+
+        <div id="container">
+            <div id="container_inner" class="clearfix">
+
+                <div id="contentarea">
+
+                    <div class="titlearea">
+                        <h3 class="t_VC">투·개표</h3>
+                        <div class="r_title">
+                            <h4>개표단위별 개표결과</h4>
+                            <ul class="location">
+                                <li class="home">홈</li>
+                                <li>제20대 대통령선거</li>
+                                <li>투·개표</li>
+                                <li>개표단위별 개표결과</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bodyarea">
+                        <div class="filter">
+                            <form id="searchForm" action="/electioninfo/electionInfo_report.xhtml" method="post">
+                                <input type="hidden" id="electionId" name="electionId" value="0020220309" />
+                                <input type="hidden" id="requestURI" name="requestURI" value="/WEB-INF/jsp/electioninfo/0020220309/vc/vccp08.jsp" />
+                                <input type="hidden" id="topMenuId" name="topMenuId" value='VC' />
+                                <input type="hidden" id="secondMenuId" name="secondMenuId" value='VCCP08' />
+                                <input type="hidden" id="menuId" name="menuId" value='VCCP08' />
+                                <input type="hidden" id="statementId" name="statementId" value="0020220309.VCCP08_#1" />
+
+                                <div class="f_select">
+                                    <dl>
+                                        <dt>선거</dt>
+                                        <dd>
+                                            <a id="electionId1" href="javascript:setElectionCode(1);" class="electionType on">대통령선거</a>
+                                            <a id="electionId2" href="javascript:setElectionCode(2);" class="electionType">국회의원선거</a>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+                                <div class="f_search">
+                                    <dl>
+                                        <dt></dt>
+                                        <dd>
+									<span id="wub_select" style="display:none;" >
+							            <div class="wub_select1">
+											<select id="electionCode" name="electionCode" style="display:none;">
+												<option value="-1">▽ 선 택</option>
+                                                <!-- option value="0" >▷ 전 체</option -->
+                                                <option value="1" selected="selected">대통령선거</option>
+												<option value="2" >국회의원선거</option>
+												</select>
+
+											<span id="spanCityCode" style="display:none">
+												<label id='cityCodeLabel' class='label' for="cityCode">시도</label>
+												<select id='cityCode' name='cityCode' >
+													<option class="o_01" value="-1" selected="selected">▽ 선 택</option>
+													<option value='1100' selected>서울특별시</option>
+													<option value='2600' >부산광역시</option>
+													<option value='2700' >대구광역시</option>
+													<option value='2800' >인천광역시</option>
+													<option value='2900' >광주광역시</option>
+													<option value='3000' >대전광역시</option>
+													<option value='3100' >울산광역시</option>
+													<option value='5100' >세종특별자치시</option>
+													<option value='4100' >경기도</option>
+													<option value='4200' >강원도</option>
+													<option value='4300' >충청북도</option>
+													<option value='4400' >충청남도</option>
+													<option value='4500' >전라북도</option>
+													<option value='4600' >전라남도</option>
+													<option value='4700' >경상북도</option>
+													<option value='4800' >경상남도</option>
+													<option value='4900' >제주특별자치도</option>
+													</select>
+											</span>
+
+											<span id="spanSggCityCode" style="display:none">
+												<label id='sggCityCodeLabel' class='label' for="sggCityCode">선거구(시도)</label>
+												<select id='sggCityCode' name='sggCityCode'>
+													<option value="-1">▽ 선 택</option>
+													</select>
+											</span>
+
+											<span id="spanTownCodeFromSgg" style="display:none">
+												<label id='townCodeFromSggLabel' class='label' for="townCodeFromSgg">선거구(구시군)</label>
+												<select id='townCodeFromSgg' name='townCodeFromSgg' >
+													<option value="-1">▽ 선 택</option>
+													</select>
+											</span>
+
+											<span id="spanTownCode" style="display:none">
+												<label id='townCodeLabel' class='label' for="townCode">구시군</label>
+												<select id='townCode' name='townCode' >
+													<option value="-1">▽ 선 택</option>
+													<option value="1101" selected="selected">종로구</option>
+										    		<option value="1102" >중구</option>
+										    		<option value="1103" >용산구</option>
+										    		<option value="1104" >성동구</option>
+										    		<option value="1105" >광진구</option>
+										    		<option value="1106" >동대문구</option>
+										    		<option value="1107" >중랑구</option>
+										    		<option value="1108" >성북구</option>
+										    		<option value="1109" >강북구</option>
+										    		<option value="1110" >도봉구</option>
+										    		<option value="1111" >노원구</option>
+										    		<option value="1112" >은평구</option>
+										    		<option value="1113" >서대문구</option>
+										    		<option value="1114" >마포구</option>
+										    		<option value="1115" >양천구</option>
+										    		<option value="1116" >강서구</option>
+										    		<option value="1117" >구로구</option>
+										    		<option value="1118" >금천구</option>
+										    		<option value="1119" >영등포구</option>
+										    		<option value="1120" >동작구</option>
+										    		<option value="1121" >관악구</option>
+										    		<option value="1122" >서초구</option>
+										    		<option value="1123" >강남구</option>
+										    		<option value="1124" >송파구</option>
+										    		<option value="1125" >강동구</option>
+										    		</select>
+											</span>
+
+											<span id="spanSggTownCode" style="display:none">
+												<label id='sggTownCodeLabel' class='label' for="sggTownCode">선거구(구시군)</label>
+												<select id='sggTownCode' name='sggTownCode'>
+													<option value="-1">▽ 선 택</option>
+													</select>
+											</span>
+
+				                       		<span id="spanCityCode" style="display:none;" >
+												<label id="cityCodeLabel" class="label" for="cityCode">시도</label>
+												<select id="checkCityCode" name="checkCityCode" style="display:none;">
+													<option value="-1">▽ 선 택</option>
+													<option value="1100">서울특별시</option>
+													<option value="2600">부산광역시</option>
+													<option value="2700">대구광역시</option>
+													<option value="2800">인천광역시</option>
+													<option value="2900">광주광역시</option>
+													<option value="3000">대전광역시</option>
+													<option value="3100">울산광역시</option>
+													<option value="5100">세종특별자치시</option>
+													<option value="4100">경기도</option>
+													<option value="4200">강원도</option>
+													<option value="4300">충청북도</option>
+													<option value="4400">충청남도</option>
+													<option value="4500">전라북도</option>
+													<option value="4600">전라남도</option>
+													<option value="4700">경상북도</option>
+													<option value="4800">경상남도</option>
+													<option value="4900">제주특별자치도</option>
+													</select>
+											</span>
+
+											<span id="spanSubmit" style="display:none">
+												<!-- 210813_ 수정 : 검색버튼 src 수정. -->
+                                                <input type="image" src="../../common/images/renewal/btn_search.png" alt="검색" title="검색" />
+											</span>
+										</div>
+									</span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="searchResult">
+                            <div class="result_top">
+                                <h5>결과보기</h5>
+                                <p class="selectCondition">
+                                    <span id="electionName"></span>
+                                    <span id="cityName"></span>
+                                    <span id="townName"></span>
+                                    <span id="sggCityName"></span>
+                                    <span id="sggTownName"></span>
+                                    <span id="townNameFromSgg"></span>
+                                    <br/>
+                                    <div class="guide_txt mt5">
+                                        개표 및 집계가 완료된 자료만 조회되며, 선거인수는 총선거인수가 아닌 개표가 완료된 선거인수가 표시됩니다.<br/>
+                                        잘못 투입·구분된 투표지는 다른 투표구의 투표지 등이 발견되어 별도 개표한 경우에만 그 득표수 등이 표시됩니다.
+                                        <br/>재외선거 공관개표결과는 종로구위원회 개표결과에서 확인할 수 있습니다.
+                                    </div>
+                                </p>
+                                <div class="r_btn">
+                                    <a href="#" class="dt_print" title="Print download">Print</a>
+                                    <a href="#" class="dt_down" title="HWP download">HWP</a>
+                                    <a href="#" class="dt_down" title="PDF download">PDF</a>
+                                    <a href="#" class="dt_down" title="XLS download">XLS</a>
+                                </div>
+                            </div>
+
+                            <div class="cont_table">
+                                <table id="table01" class="table01" summary="개표단위별 개표결과" bgcolor="#FFFFFF">
+                                    <caption>개표단위별 개표결과</caption>
+                                    <thead>
+                                    <tr>
+                                        <th class="firstTh"  rowspan="2" width="75">읍면동명</th>
+                                        <th rowspan="2" width="75">투표구명</th>
+                                        <th rowspan="2" width="60">선거인수</th>
+                                        <th rowspan="2" width="60">투표수</th>
+                                        <th  width="1105" colspan="13">후보자별 득표수</th>
+                                        <th rowspan="2" width="60">무효<br/>투표수</th>
+                                        <th rowspan="2" width="60">기권수</th>
+                                    </tr>
+                                    <tr>
+                                        <th >더불어민주당<br/>이재명</th>
+                                        <th >국민의힘<br/>윤석열</th>
+                                        <th >정의당<br/>심상정</th>
+                                        <th >기본소득당<br/>오준호</th>
+                                        <th >국가혁명당<br/>허경영</th>
+                                        <th >노동당<br/>이백윤</th>
+                                        <th >새누리당<br/>옥은호</th>
+                                        <th >신자유민주연합<br/>김경재</th>
+                                        <th >우리공화당<br/>조원진</th>
+                                        <th >진보당<br/>김재연</th>
+                                        <th >통일한국당<br/>이경희</th>
+                                        <th >한류연합당<br/>김민찬</th>
+                                        <th >계</th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td class="firstTd alignL">합계</td>
+                                        <td class=alignL></td>
+                                        <td class=alignR>129,968</td>
+                                        <td class=alignR>100,629</td>
+                                        <td class=alignR>46,130</td>
+                                        <td class=alignR>49,172</td>
+                                        <td class=alignR>3,115</td>
+                                        <td class=alignR>53</td>
+                                        <td class=alignR>558</td>
+                                        <td class=alignR>42</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>50</td>
+                                        <td class=alignR>82</td>
+                                        <td class=alignR>105</td>
+                                        <td class=alignR>20</td>
+                                        <td class=alignR>30</td>
+                                        <td class=alignR>99,366</td>
+                                        <td  class=alignR>1,263</td>
+                                        <td  class=alignR>29,339</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">거소·선상투표</td>
+                                        <td class=alignL></td>
+                                        <td class=alignR>217</td>
+                                        <td class=alignR>200</td>
+                                        <td class=alignR>82</td>
+                                        <td class=alignR>85</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>177</td>
+                                        <td  class=alignR>23</td>
+                                        <td  class=alignR>17</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">관외사전투표</td>
+                                        <td class=alignL></td>
+                                        <td class=alignR>13,132</td>
+                                        <td class=alignR>13,092</td>
+                                        <td class=alignR>6,416</td>
+                                        <td class=alignR>5,972</td>
+                                        <td class=alignR>434</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>99</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>22</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>12,970</td>
+                                        <td  class=alignR>122</td>
+                                        <td  class=alignR>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">재외투표</td>
+                                        <td class=alignL></td>
+                                        <td class=alignR>2,077</td>
+                                        <td class=alignR>1,480</td>
+                                        <td class=alignR>739</td>
+                                        <td class=alignR>541</td>
+                                        <td class=alignR>56</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,348</td>
+                                        <td  class=alignR>132</td>
+                                        <td  class=alignR>597</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">재외투표(공관)</td>
+                                        <td class=alignL></td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>188</td>
+                                        <td class=alignR>83</td>
+                                        <td class=alignR>79</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>168</td>
+                                        <td  class=alignR>20</td>
+                                        <td  class=alignR>-188</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">청운효자동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>8,706</td>
+                                        <td class=alignR>6,640</td>
+                                        <td class=alignR>3,150</td>
+                                        <td class=alignR>3,137</td>
+                                        <td class=alignR>237</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>26</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>6,572</td>
+                                        <td  class=alignR>68</td>
+                                        <td  class=alignR>2,066</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>3,102</td>
+                                        <td class=alignR>3,098</td>
+                                        <td class=alignR>1,758</td>
+                                        <td class=alignR>1,221</td>
+                                        <td class=alignR>81</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>3,078</td>
+                                        <td  class=alignR>20</td>
+                                        <td  class=alignR>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>청운효자동제1투</td>
+                                        <td class=alignR>1,925</td>
+                                        <td class=alignR>1,170</td>
+                                        <td class=alignR>402</td>
+                                        <td class=alignR>700</td>
+                                        <td class=alignR>43</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,157</td>
+                                        <td  class=alignR>13</td>
+                                        <td  class=alignR>755</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>청운효자동제2투</td>
+                                        <td class=alignR>1,792</td>
+                                        <td class=alignR>1,155</td>
+                                        <td class=alignR>436</td>
+                                        <td class=alignR>637</td>
+                                        <td class=alignR>61</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1,140</td>
+                                        <td  class=alignR>15</td>
+                                        <td  class=alignR>637</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>청운효자동제3투</td>
+                                        <td class=alignR>1,887</td>
+                                        <td class=alignR>1,217</td>
+                                        <td class=alignR>554</td>
+                                        <td class=alignR>579</td>
+                                        <td class=alignR>52</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,197</td>
+                                        <td  class=alignR>20</td>
+                                        <td  class=alignR>670</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">사직동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>7,651</td>
+                                        <td class=alignR>5,850</td>
+                                        <td class=alignR>2,260</td>
+                                        <td class=alignR>3,282</td>
+                                        <td class=alignR>212</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>22</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>5,790</td>
+                                        <td  class=alignR>60</td>
+                                        <td  class=alignR>1,801</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>2,737</td>
+                                        <td class=alignR>2,732</td>
+                                        <td class=alignR>1,360</td>
+                                        <td class=alignR>1,259</td>
+                                        <td class=alignR>83</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2,709</td>
+                                        <td  class=alignR>23</td>
+                                        <td  class=alignR>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>사직동제1투</td>
+                                        <td class=alignR>1,555</td>
+                                        <td class=alignR>823</td>
+                                        <td class=alignR>317</td>
+                                        <td class=alignR>451</td>
+                                        <td class=alignR>32</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>812</td>
+                                        <td  class=alignR>11</td>
+                                        <td  class=alignR>732</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>사직동제2투</td>
+                                        <td class=alignR>3,359</td>
+                                        <td class=alignR>2,295</td>
+                                        <td class=alignR>583</td>
+                                        <td class=alignR>1,572</td>
+                                        <td class=alignR>97</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2,269</td>
+                                        <td  class=alignR>26</td>
+                                        <td  class=alignR>1,064</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">삼청동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>1,935</td>
+                                        <td class=alignR>1,443</td>
+                                        <td class=alignR>591</td>
+                                        <td class=alignR>767</td>
+                                        <td class=alignR>51</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,425</td>
+                                        <td  class=alignR>18</td>
+                                        <td  class=alignR>492</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>717</td>
+                                        <td class=alignR>716</td>
+                                        <td class=alignR>376</td>
+                                        <td class=alignR>299</td>
+                                        <td class=alignR>25</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>706</td>
+                                        <td  class=alignR>10</td>
+                                        <td  class=alignR>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>삼청동투표소</td>
+                                        <td class=alignR>1,218</td>
+                                        <td class=alignR>727</td>
+                                        <td class=alignR>215</td>
+                                        <td class=alignR>468</td>
+                                        <td class=alignR>26</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>719</td>
+                                        <td  class=alignR>8</td>
+                                        <td  class=alignR>491</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">부암동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>7,205</td>
+                                        <td class=alignR>5,485</td>
+                                        <td class=alignR>2,496</td>
+                                        <td class=alignR>2,731</td>
+                                        <td class=alignR>154</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>26</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>5,422</td>
+                                        <td  class=alignR>63</td>
+                                        <td  class=alignR>1,720</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>2,360</td>
+                                        <td class=alignR>2,360</td>
+                                        <td class=alignR>1,283</td>
+                                        <td class=alignR>1,002</td>
+                                        <td class=alignR>57</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2,351</td>
+                                        <td  class=alignR>9</td>
+                                        <td  class=alignR>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>부암동제1투</td>
+                                        <td class=alignR>1,761</td>
+                                        <td class=alignR>1,028</td>
+                                        <td class=alignR>406</td>
+                                        <td class=alignR>556</td>
+                                        <td class=alignR>32</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,005</td>
+                                        <td  class=alignR>23</td>
+                                        <td  class=alignR>733</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>부암동제2투</td>
+                                        <td class=alignR>1,704</td>
+                                        <td class=alignR>1,165</td>
+                                        <td class=alignR>477</td>
+                                        <td class=alignR>619</td>
+                                        <td class=alignR>41</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,147</td>
+                                        <td  class=alignR>18</td>
+                                        <td  class=alignR>539</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>부암동제3투</td>
+                                        <td class=alignR>1,380</td>
+                                        <td class=alignR>932</td>
+                                        <td class=alignR>330</td>
+                                        <td class=alignR>554</td>
+                                        <td class=alignR>24</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>919</td>
+                                        <td  class=alignR>13</td>
+                                        <td  class=alignR>448</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">평창동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>13,796</td>
+                                        <td class=alignR>10,534</td>
+                                        <td class=alignR>3,866</td>
+                                        <td class=alignR>6,248</td>
+                                        <td class=alignR>266</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>35</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>11</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>10,455</td>
+                                        <td  class=alignR>79</td>
+                                        <td  class=alignR>3,262</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>4,411</td>
+                                        <td class=alignR>4,411</td>
+                                        <td class=alignR>2,011</td>
+                                        <td class=alignR>2,253</td>
+                                        <td class=alignR>104</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>4,388</td>
+                                        <td  class=alignR>23</td>
+                                        <td  class=alignR>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>평창동제1투</td>
+                                        <td class=alignR>1,936</td>
+                                        <td class=alignR>1,181</td>
+                                        <td class=alignR>360</td>
+                                        <td class=alignR>775</td>
+                                        <td class=alignR>31</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,173</td>
+                                        <td  class=alignR>8</td>
+                                        <td  class=alignR>755</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>평창동제2투</td>
+                                        <td class=alignR>2,720</td>
+                                        <td class=alignR>1,718</td>
+                                        <td class=alignR>429</td>
+                                        <td class=alignR>1,233</td>
+                                        <td class=alignR>30</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,703</td>
+                                        <td  class=alignR>15</td>
+                                        <td  class=alignR>1,002</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>평창동제3투</td>
+                                        <td class=alignR>1,653</td>
+                                        <td class=alignR>1,180</td>
+                                        <td class=alignR>348</td>
+                                        <td class=alignR>771</td>
+                                        <td class=alignR>37</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,169</td>
+                                        <td  class=alignR>11</td>
+                                        <td  class=alignR>473</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>평창동제4투</td>
+                                        <td class=alignR>1,563</td>
+                                        <td class=alignR>1,071</td>
+                                        <td class=alignR>395</td>
+                                        <td class=alignR>611</td>
+                                        <td class=alignR>36</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1,060</td>
+                                        <td  class=alignR>11</td>
+                                        <td  class=alignR>492</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>평창동제5투</td>
+                                        <td class=alignR>1,513</td>
+                                        <td class=alignR>973</td>
+                                        <td class=alignR>323</td>
+                                        <td class=alignR>605</td>
+                                        <td class=alignR>28</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>962</td>
+                                        <td  class=alignR>11</td>
+                                        <td  class=alignR>540</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">무악동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>6,143</td>
+                                        <td class=alignR>4,978</td>
+                                        <td class=alignR>2,162</td>
+                                        <td class=alignR>2,586</td>
+                                        <td class=alignR>155</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>17</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4,933</td>
+                                        <td  class=alignR>45</td>
+                                        <td  class=alignR>1,165</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>2,572</td>
+                                        <td class=alignR>2,570</td>
+                                        <td class=alignR>1,306</td>
+                                        <td class=alignR>1,178</td>
+                                        <td class=alignR>63</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2,555</td>
+                                        <td  class=alignR>15</td>
+                                        <td  class=alignR>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>무악동제1투</td>
+                                        <td class=alignR>1,480</td>
+                                        <td class=alignR>1,063</td>
+                                        <td class=alignR>365</td>
+                                        <td class=alignR>636</td>
+                                        <td class=alignR>44</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,050</td>
+                                        <td  class=alignR>13</td>
+                                        <td  class=alignR>417</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>무악동제2투</td>
+                                        <td class=alignR>2,091</td>
+                                        <td class=alignR>1,345</td>
+                                        <td class=alignR>491</td>
+                                        <td class=alignR>772</td>
+                                        <td class=alignR>48</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>11</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1,328</td>
+                                        <td  class=alignR>17</td>
+                                        <td  class=alignR>746</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">교남동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>7,795</td>
+                                        <td class=alignR>6,215</td>
+                                        <td class=alignR>2,621</td>
+                                        <td class=alignR>3,276</td>
+                                        <td class=alignR>193</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>28</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>11</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>6,147</td>
+                                        <td  class=alignR>68</td>
+                                        <td  class=alignR>1,580</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>2,876</td>
+                                        <td class=alignR>2,875</td>
+                                        <td class=alignR>1,415</td>
+                                        <td class=alignR>1,335</td>
+                                        <td class=alignR>85</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2,853</td>
+                                        <td  class=alignR>22</td>
+                                        <td  class=alignR>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>교남동제1투</td>
+                                        <td class=alignR>1,414</td>
+                                        <td class=alignR>837</td>
+                                        <td class=alignR>395</td>
+                                        <td class=alignR>387</td>
+                                        <td class=alignR>25</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>823</td>
+                                        <td  class=alignR>14</td>
+                                        <td  class=alignR>577</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>교남동제2투</td>
+                                        <td class=alignR>1,229</td>
+                                        <td class=alignR>748</td>
+                                        <td class=alignR>293</td>
+                                        <td class=alignR>396</td>
+                                        <td class=alignR>30</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>734</td>
+                                        <td  class=alignR>14</td>
+                                        <td  class=alignR>481</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>교남동제3투</td>
+                                        <td class=alignR>2,276</td>
+                                        <td class=alignR>1,755</td>
+                                        <td class=alignR>518</td>
+                                        <td class=alignR>1,158</td>
+                                        <td class=alignR>53</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,737</td>
+                                        <td  class=alignR>18</td>
+                                        <td  class=alignR>521</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">가회동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>3,454</td>
+                                        <td class=alignR>2,650</td>
+                                        <td class=alignR>1,252</td>
+                                        <td class=alignR>1,243</td>
+                                        <td class=alignR>104</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2,623</td>
+                                        <td  class=alignR>27</td>
+                                        <td  class=alignR>804</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>1,456</td>
+                                        <td class=alignR>1,454</td>
+                                        <td class=alignR>793</td>
+                                        <td class=alignR>586</td>
+                                        <td class=alignR>55</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1,442</td>
+                                        <td  class=alignR>12</td>
+                                        <td  class=alignR>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>가회동투표소</td>
+                                        <td class=alignR>1,998</td>
+                                        <td class=alignR>1,196</td>
+                                        <td class=alignR>459</td>
+                                        <td class=alignR>657</td>
+                                        <td class=alignR>49</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1,181</td>
+                                        <td  class=alignR>15</td>
+                                        <td  class=alignR>802</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">종로1·2·3·4가동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>5,741</td>
+                                        <td class=alignR>3,527</td>
+                                        <td class=alignR>1,468</td>
+                                        <td class=alignR>1,911</td>
+                                        <td class=alignR>81</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>17</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3,490</td>
+                                        <td  class=alignR>37</td>
+                                        <td  class=alignR>2,214</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>1,540</td>
+                                        <td class=alignR>1,540</td>
+                                        <td class=alignR>753</td>
+                                        <td class=alignR>743</td>
+                                        <td class=alignR>28</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,528</td>
+                                        <td  class=alignR>12</td>
+                                        <td  class=alignR>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>종로1·2·3·4가동제1투</td>
+                                        <td class=alignR>2,022</td>
+                                        <td class=alignR>836</td>
+                                        <td class=alignR>270</td>
+                                        <td class=alignR>522</td>
+                                        <td class=alignR>25</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>830</td>
+                                        <td  class=alignR>6</td>
+                                        <td  class=alignR>1,186</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>종로1·2·3·4가동제2투</td>
+                                        <td class=alignR>2,179</td>
+                                        <td class=alignR>1,151</td>
+                                        <td class=alignR>445</td>
+                                        <td class=alignR>646</td>
+                                        <td class=alignR>28</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,132</td>
+                                        <td  class=alignR>19</td>
+                                        <td  class=alignR>1,028</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">종로5·6가동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>4,130</td>
+                                        <td class=alignR>2,906</td>
+                                        <td class=alignR>1,305</td>
+                                        <td class=alignR>1,460</td>
+                                        <td class=alignR>76</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>23</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2,869</td>
+                                        <td  class=alignR>37</td>
+                                        <td  class=alignR>1,224</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>1,327</td>
+                                        <td class=alignR>1,325</td>
+                                        <td class=alignR>668</td>
+                                        <td class=alignR>608</td>
+                                        <td class=alignR>30</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,314</td>
+                                        <td  class=alignR>11</td>
+                                        <td  class=alignR>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>종로5·6가동제1투</td>
+                                        <td class=alignR>1,520</td>
+                                        <td class=alignR>850</td>
+                                        <td class=alignR>310</td>
+                                        <td class=alignR>485</td>
+                                        <td class=alignR>32</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>833</td>
+                                        <td  class=alignR>17</td>
+                                        <td  class=alignR>670</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>종로5·6가동제2투</td>
+                                        <td class=alignR>1,283</td>
+                                        <td class=alignR>731</td>
+                                        <td class=alignR>327</td>
+                                        <td class=alignR>367</td>
+                                        <td class=alignR>14</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>12</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>722</td>
+                                        <td  class=alignR>9</td>
+                                        <td  class=alignR>552</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">이화동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>6,154</td>
+                                        <td class=alignR>4,703</td>
+                                        <td class=alignR>2,279</td>
+                                        <td class=alignR>2,141</td>
+                                        <td class=alignR>174</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>23</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>4,640</td>
+                                        <td  class=alignR>63</td>
+                                        <td  class=alignR>1,451</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>2,430</td>
+                                        <td class=alignR>2,430</td>
+                                        <td class=alignR>1,347</td>
+                                        <td class=alignR>975</td>
+                                        <td class=alignR>74</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2,410</td>
+                                        <td  class=alignR>20</td>
+                                        <td  class=alignR>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>이화동제1투</td>
+                                        <td class=alignR>1,960</td>
+                                        <td class=alignR>1,248</td>
+                                        <td class=alignR>535</td>
+                                        <td class=alignR>600</td>
+                                        <td class=alignR>64</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,218</td>
+                                        <td  class=alignR>30</td>
+                                        <td  class=alignR>712</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>이화동제2투</td>
+                                        <td class=alignR>1,764</td>
+                                        <td class=alignR>1,025</td>
+                                        <td class=alignR>397</td>
+                                        <td class=alignR>566</td>
+                                        <td class=alignR>36</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,012</td>
+                                        <td  class=alignR>13</td>
+                                        <td  class=alignR>739</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">혜화동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>12,828</td>
+                                        <td class=alignR>9,743</td>
+                                        <td class=alignR>4,400</td>
+                                        <td class=alignR>4,752</td>
+                                        <td class=alignR>364</td>
+                                        <td class=alignR>15</td>
+                                        <td class=alignR>47</td>
+                                        <td class=alignR>12</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>9,616</td>
+                                        <td  class=alignR>127</td>
+                                        <td  class=alignR>3,085</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>4,538</td>
+                                        <td class=alignR>4,532</td>
+                                        <td class=alignR>2,357</td>
+                                        <td class=alignR>1,962</td>
+                                        <td class=alignR>152</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>11</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>4,502</td>
+                                        <td  class=alignR>30</td>
+                                        <td  class=alignR>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>혜화동제1투</td>
+                                        <td class=alignR>2,127</td>
+                                        <td class=alignR>1,351</td>
+                                        <td class=alignR>576</td>
+                                        <td class=alignR>669</td>
+                                        <td class=alignR>59</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,321</td>
+                                        <td  class=alignR>30</td>
+                                        <td  class=alignR>776</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>혜화동제2투</td>
+                                        <td class=alignR>1,921</td>
+                                        <td class=alignR>1,208</td>
+                                        <td class=alignR>457</td>
+                                        <td class=alignR>659</td>
+                                        <td class=alignR>55</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,185</td>
+                                        <td  class=alignR>23</td>
+                                        <td  class=alignR>713</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>혜화동제3투</td>
+                                        <td class=alignR>1,774</td>
+                                        <td class=alignR>1,094</td>
+                                        <td class=alignR>366</td>
+                                        <td class=alignR>665</td>
+                                        <td class=alignR>40</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,084</td>
+                                        <td  class=alignR>10</td>
+                                        <td  class=alignR>680</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>혜화동제4투</td>
+                                        <td class=alignR>1,263</td>
+                                        <td class=alignR>820</td>
+                                        <td class=alignR>320</td>
+                                        <td class=alignR>436</td>
+                                        <td class=alignR>33</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>804</td>
+                                        <td  class=alignR>16</td>
+                                        <td  class=alignR>443</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>혜화동제5투</td>
+                                        <td class=alignR>1,205</td>
+                                        <td class=alignR>738</td>
+                                        <td class=alignR>324</td>
+                                        <td class=alignR>361</td>
+                                        <td class=alignR>25</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>5</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>720</td>
+                                        <td  class=alignR>18</td>
+                                        <td  class=alignR>467</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">창신제1동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>5,152</td>
+                                        <td class=alignR>3,907</td>
+                                        <td class=alignR>2,134</td>
+                                        <td class=alignR>1,580</td>
+                                        <td class=alignR>90</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>37</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>3,859</td>
+                                        <td  class=alignR>48</td>
+                                        <td  class=alignR>1,245</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>2,369</td>
+                                        <td class=alignR>2,368</td>
+                                        <td class=alignR>1,421</td>
+                                        <td class=alignR>844</td>
+                                        <td class=alignR>50</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>19</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2,342</td>
+                                        <td  class=alignR>26</td>
+                                        <td  class=alignR>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>창신제1동제1투</td>
+                                        <td class=alignR>833</td>
+                                        <td class=alignR>360</td>
+                                        <td class=alignR>167</td>
+                                        <td class=alignR>170</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>352</td>
+                                        <td  class=alignR>8</td>
+                                        <td  class=alignR>473</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>창신제1동제2투</td>
+                                        <td class=alignR>1,950</td>
+                                        <td class=alignR>1,179</td>
+                                        <td class=alignR>546</td>
+                                        <td class=alignR>566</td>
+                                        <td class=alignR>31</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>14</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1,165</td>
+                                        <td  class=alignR>14</td>
+                                        <td  class=alignR>771</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">창신제2동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>6,071</td>
+                                        <td class=alignR>4,089</td>
+                                        <td class=alignR>2,262</td>
+                                        <td class=alignR>1,633</td>
+                                        <td class=alignR>78</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>35</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>4,031</td>
+                                        <td  class=alignR>58</td>
+                                        <td  class=alignR>1,982</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>1,320</td>
+                                        <td class=alignR>1,313</td>
+                                        <td class=alignR>839</td>
+                                        <td class=alignR>426</td>
+                                        <td class=alignR>24</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,301</td>
+                                        <td  class=alignR>12</td>
+                                        <td  class=alignR>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>창신제2동제1투</td>
+                                        <td class=alignR>1,260</td>
+                                        <td class=alignR>707</td>
+                                        <td class=alignR>346</td>
+                                        <td class=alignR>323</td>
+                                        <td class=alignR>11</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>694</td>
+                                        <td  class=alignR>13</td>
+                                        <td  class=alignR>553</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>창신제2동제2투</td>
+                                        <td class=alignR>1,910</td>
+                                        <td class=alignR>1,193</td>
+                                        <td class=alignR>602</td>
+                                        <td class=alignR>532</td>
+                                        <td class=alignR>26</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>8</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1,175</td>
+                                        <td  class=alignR>18</td>
+                                        <td  class=alignR>717</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>창신제2동제3투</td>
+                                        <td class=alignR>1,581</td>
+                                        <td class=alignR>876</td>
+                                        <td class=alignR>475</td>
+                                        <td class=alignR>352</td>
+                                        <td class=alignR>17</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>11</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>861</td>
+                                        <td  class=alignR>15</td>
+                                        <td  class=alignR>705</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">창신제3동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>5,236</td>
+                                        <td class=alignR>4,067</td>
+                                        <td class=alignR>2,036</td>
+                                        <td class=alignR>1,848</td>
+                                        <td class=alignR>109</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>16</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4,021</td>
+                                        <td  class=alignR>46</td>
+                                        <td  class=alignR>1,169</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>1,983</td>
+                                        <td class=alignR>1,982</td>
+                                        <td class=alignR>1,131</td>
+                                        <td class=alignR>786</td>
+                                        <td class=alignR>46</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,968</td>
+                                        <td  class=alignR>14</td>
+                                        <td  class=alignR>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>창신제3동제1투</td>
+                                        <td class=alignR>1,204</td>
+                                        <td class=alignR>707</td>
+                                        <td class=alignR>335</td>
+                                        <td class=alignR>334</td>
+                                        <td class=alignR>19</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>699</td>
+                                        <td  class=alignR>8</td>
+                                        <td  class=alignR>497</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>창신제3동제2투</td>
+                                        <td class=alignR>2,049</td>
+                                        <td class=alignR>1,378</td>
+                                        <td class=alignR>570</td>
+                                        <td class=alignR>728</td>
+                                        <td class=alignR>44</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>6</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,354</td>
+                                        <td  class=alignR>24</td>
+                                        <td  class=alignR>671</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">숭인제1동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>4,575</td>
+                                        <td class=alignR>3,286</td>
+                                        <td class=alignR>1,641</td>
+                                        <td class=alignR>1,489</td>
+                                        <td class=alignR>84</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>26</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>3,248</td>
+                                        <td  class=alignR>38</td>
+                                        <td  class=alignR>1,289</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>1,523</td>
+                                        <td class=alignR>1,522</td>
+                                        <td class=alignR>867</td>
+                                        <td class=alignR>600</td>
+                                        <td class=alignR>31</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,509</td>
+                                        <td  class=alignR>13</td>
+                                        <td  class=alignR>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>숭인제1동제1투</td>
+                                        <td class=alignR>1,729</td>
+                                        <td class=alignR>948</td>
+                                        <td class=alignR>417</td>
+                                        <td class=alignR>475</td>
+                                        <td class=alignR>24</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>12</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>929</td>
+                                        <td  class=alignR>19</td>
+                                        <td  class=alignR>781</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>숭인제1동제2투</td>
+                                        <td class=alignR>1,323</td>
+                                        <td class=alignR>816</td>
+                                        <td class=alignR>357</td>
+                                        <td class=alignR>414</td>
+                                        <td class=alignR>29</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>7</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>810</td>
+                                        <td  class=alignR>6</td>
+                                        <td  class=alignR>507</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">숭인제2동</td>
+                                        <td class=alignL>소계</td>
+                                        <td class=alignR>7,970</td>
+                                        <td class=alignR>5,605</td>
+                                        <td class=alignR>2,866</td>
+                                        <td class=alignR>2,394</td>
+                                        <td class=alignR>185</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>49</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>9</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>5,522</td>
+                                        <td  class=alignR>83</td>
+                                        <td  class=alignR>2,365</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>관내사전투표</td>
+                                        <td class=alignR>2,433</td>
+                                        <td class=alignR>2,431</td>
+                                        <td class=alignR>1,397</td>
+                                        <td class=alignR>921</td>
+                                        <td class=alignR>63</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>15</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2,403</td>
+                                        <td  class=alignR>28</td>
+                                        <td  class=alignR>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>숭인제2동제1투</td>
+                                        <td class=alignR>2,200</td>
+                                        <td class=alignR>1,291</td>
+                                        <td class=alignR>555</td>
+                                        <td class=alignR>621</td>
+                                        <td class=alignR>64</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>12</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>4</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>1,259</td>
+                                        <td  class=alignR>32</td>
+                                        <td  class=alignR>909</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>숭인제2동제2투</td>
+                                        <td class=alignR>1,687</td>
+                                        <td class=alignR>925</td>
+                                        <td class=alignR>419</td>
+                                        <td class=alignR>451</td>
+                                        <td class=alignR>27</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>10</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>3</td>
+                                        <td class=alignR>1</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>915</td>
+                                        <td  class=alignR>10</td>
+                                        <td  class=alignR>762</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL"></td>
+                                        <td class=alignL>숭인제2동제3투</td>
+                                        <td class=alignR>1,650</td>
+                                        <td class=alignR>958</td>
+                                        <td class=alignR>495</td>
+                                        <td class=alignR>401</td>
+                                        <td class=alignR>31</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>12</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>945</td>
+                                        <td  class=alignR>13</td>
+                                        <td  class=alignR>692</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="firstTd alignL">잘못 투입·구분된 투표지</td>
+                                        <td class=alignL></td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>41</td>
+                                        <td class=alignR>21</td>
+                                        <td class=alignR>17</td>
+                                        <td class=alignR>2</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>0</td>
+                                        <td class=alignR>40</td>
+                                        <td  class=alignR>1</td>
+                                        <td  class=alignR>-41</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+
+            <div class="footmu">
+                <ul>
+                    <li><a href="/search/searchCandidate.xhtml">통합검색</a></li>
+                    <li><a href="/main/help/helpMenu.xhtml?selectedName=privacypolicy" class="bold">개인정보 처리방침</a></li>
+                    <li><a href="/main/help/helpMenu.xhtml?selectedName=copyrightpolicy">이용지침</a></li>
+
+                    <li><a href="/main/help/helpMenu.xhtml?selectedName=faq">FAQ</a></li>
+                    <li><a href="/main/help/helpMenu.xhtml?selectedName=byelection">재보궐선거 실시사유 확정상황</a></li>
+                </ul>
+                <div class="footsite">
+                    <select id="sitelink" name="sitelink" title="관련사이트 선택 이동">
+                        <option value="">관련사이트</option>
+                        <option value="http://www.nec.go.kr">중앙선거관리위원회홈페이지</option>
+                        <option value="http://ok.nec.go.kr">재외선거홈페이지</option>
+                        <option value="http://policy.nec.go.kr">정책ㆍ공약알리미</option>
+                        <option value="http://ova.nec.go.kr">재외선거 인터넷 신고ㆍ신청</option>
+                    </select> <input id="moveToSite" class="input_go" type="image"
+                                     src="/common/images/common/btn_go.gif" title="관련사이트 이동(새창열림)"
+                                     alt="관련사이트 이동" />
+                </div>
+            </div>
+
+
+
+            <!-- 210812_ 추가 : [.copyright_bg] 태그 추가. -->
+            <div class="copyright_bg">
+                <div class="copyright">
+                    <p class="footlogo">
+                        <span>중앙선거관리위원회</span>
+                    </p>
+                    <!-- 210813_ 수정 : [.copyright] 내용 변경. -->
+                    <p class="address">[13809] 경기도 과천시 홍촌말로 44 중앙선거관리위원회 대표전화 : 02-503-1114 / 선거 법질의·신고제보 : 국번없이 <span>1390</span><br>COPYRIGHT © National Election Commission, All Rights Reserved. 본 사이트는 IE9 이상, 크롬에 최적화 되어 있습니다.</p>
+                    <p class="callcenter">
+                        <span>선거법안내 선거범죄신고 선거콜센터 1390</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                if ('1100' == '1' || '1101' == '1') {
+                    fn_selectElment('1100', '1101', '');
+                } else {
+                    if ('' == 'true') {
+                        fn_triggerFuncton();
+                    }
+                }
+            });
+
+            function fn_triggerFuncton() {
+                $("#spanSubmit").children("input[type=image]").trigger("click");
+            }
+
+            function fn_selectElment(cityCode, town, searchAction) {
+                if (cityCode == '1') {
+                    $("#cityCode").children("option:first").attr("selected", "selected");
+                    if ($("#cityCode").children("option:first").val() == "-1") {
+                        $("#cityCode").unbind("change");
+                        $("#cityCode").children("option:eq(1)").attr("selected", "selected");
+                    }
+                }else{
+                    $("#cityCode").unbind("change");
+                }
+                if (town == '1') {
+                    fn_getTownCode($("#cityCode").val(), searchAction);
+                } else {
+                    if (searchAction == 'true') {
+                        fn_triggerFuncton();
+                    }
+                }
+            }
+
+            function fn_getTownCode(cityVal, searchAction) {
+                var locationStr = '', params = '';
+                if ($("#electionId").val() == '0000000000') {
+                    locationStr = '/bizcommon/selectbox/selectbox_townCodeBySgJson_Old.json';
+                    if ('' == '0') {
+                        locationStr = '/bizcommon/selectbox/selectbox_townCodeBySgJson_GuOld.json';
+                    }
+                    params = {
+                        electionId : $('#electionId').val(),
+                        electionCode : $('#electionName').val(),
+                        cityCode : cityVal,
+                        subElectionCode : $('#electionCode').val()
+                    }
+                } else {
+                    locationStr = '/bizcommon/selectbox/selectbox_townCodeJson.json';
+                    params = {
+                        electionId : $('#electionId').val(),
+                        cityCode : cityVal
+                    }
+
+                }
+
+                $.getJSONTE(locationStr, params, function(response, status) {
+                    var townCodeList = response;
+                    var townCodeEl = $('#townCode');
+                    var option = '';
+                    $('#townCode option').filter(function() {
+                        $value = $(this).val();
+                        if ($value > 0)
+                            return this;
+                    }).remove();
+                    // townCode 옵션 추가
+                    for (var i = 0; i < townCodeList.length; i++) {
+                        if (i == 0) {
+
+                            if (townCodeList[0].CODE == '-1') {
+                                option = $('<option>').attr('value',
+                                    townCodeList[0].CODE)
+                                    .html(townCodeList[0].NAME);
+                                option = $('<option>').attr('value',
+                                    townCodeList[1].CODE).attr('selected',
+                                    "selected").html(townCodeList[1].NAME);
+                                i++;
+                            } else {
+                                option = $('<option>').attr('value',
+                                    townCodeList[0].CODE).attr('selected',
+                                    "selected").html(townCodeList[0].NAME);
+                            }
+                        } else {
+                            option = $('<option>').attr('value', townCodeList[i].CODE)
+                                .html(townCodeList[i].NAME);
+                        }
+                        option.appendTo(townCodeEl);
+                    }
+                    previousCityCode = cityVal;
+                    if (searchAction == 'true') {
+                        fn_triggerFuncton();
+                    }
+                });
+            }
+            //210813_ 추가 : 관련사이트 이동 스크립트 수정.
+            //<[CDATA[
+            $(function() {
+
+                $('#sitelink').change(function() {
+                    if ($('#sitelink').val() != '') {
+                        window.open($('#sitelink').val(), '_blank');
+                    }
+                });
+            });
+            //]]>
+        </script></div>
+</div>
+<script type="text/javascript">
+
+    var rTitle = "",selectCondition="",tabledata="";
+
+    $(document).bind("contextmenu",function(e){
+        return false;
+    });
+
+    function fn_chkUbiData(){
+        var eleName = '제20대 대통령선거';
+        var electionId = '0020220309';
+        if(electionId == '0000000000'){
+            rTitle = $(".r_title h4").text();
+        }else{
+            rTitle = "["+ eleName + "] " + $(".r_title h4").text();
+        }
+        selectCondition = $(".selectCondition:first span").text();
+        tabledata = $(".searchResult").find("table:first").parent().html();
+    }
+
+    function fn_chkUbiReportBtn(){
+
+        if($(".searchResult .result_top").length>0 && $(".searchResult .result_top .r_btn").length>0){
+            $(".searchResult .result_top .r_btn").remove();
+        }
+
+
+        if($(".searchResult .result_top").length>0 && $(".searchResult .result_top .r_btn").length==0){
+
+
+            fn_chkUbiData();
+
+
+            $.each($(".searchResult .result_top"),function(index,divEl){
+                var div = document.createElement("div");
+                div.className="r_btn";
+                $(divEl).append(div);
+                for(var i=0; i<3; i++){
+                    $(divEl).find(".r_btn").append(document.createElement("a"));
+                }
+
+                $(divEl).find(".r_btn a").eq(0).attr("href","javascript:void(0);").attr("class","dt_down").attr("onclick","go_Report('HWP');").attr("title","HWP download").text("HWP");
+                $(divEl).find(".r_btn a").eq(1).attr("href","javascript:void(0);").attr("class","dt_down").attr("onclick","go_Report('PDF');").attr("title","PDF download").text("PDF");
+                $(divEl).find(".r_btn a").eq(2).attr("href","javascript:void(0);").attr("class","dt_down").attr("onclick","go_Report('XLS');").attr("title","엑셀 download").text("엑셀");
+
+
+
+                if(typeof(RBtnRemoveList) != "undefined"){
+                    $.each($(divEl).find(".r_btn a"), function(index,aEl){
+                        $.each(RBtnRemoveList, function(secIndex,removeTargetText){
+                            if($(aEl).text() == removeTargetText){
+                                $(aEl).remove();
+                            }
+                        });
+                    });
+                }
+
+
+
+                $(".r_btn").show();
+            });
+
+            fn_chkColGroup();
+        }
+    }
+
+
+    function fn_chkColGroup(){
+        $.each($("table"),function(index,tableEl){
+            if($(tableEl).find("col").length != $(tableEl).find("td:first").parent().children("td").length){
+
+                if($(tableEl).find("colgroup").length == 0){
+                    $(tableEl).prepend(document.createElement("colgroup"));
+                }
+
+
+                var parentDisNone = false;
+
+                var colLength = $(tableEl).find("col").length;
+
+                var colGroup = $(tableEl).find("colgroup");
+
+                if($(tableEl).parent().css("display")=="none"){
+                    parentDisNone = true;
+                    $(tableEl).parent().css("display","block");
+                }
+
+
+                if($(tableEl).find("td:first").parent().children("td").length >1){
+                    $.each($(tableEl).find("td:first").parent().children("td"),function(tdIndex,tdEl){
+                        if(colLength < tdIndex+1){
+                            colGroup.append(document.createElement("col"));
+
+                            colGroup.children("col").eq(tdIndex).attr("width","auto");
+                        }
+                    });
+                }else{
+                    $.each($(tableEl).find("th:last").parent().children("th"),function(thIndex,thEl){
+                        if(colLength < thIndex+1){
+                            colGroup.append(document.createElement("col"));
+
+                            colGroup.children("col").eq(thIndex).attr("width","auto");
+                        }
+                    });
+                }
+
+                if($(tableEl).parent().css("display") != "none" && parentDisNone == true){
+                    $(tableEl).parent().css("display","none");
+                }
+            }
+        });
+    }
+    $(document).ready(function(){
+        fn_chkUbiReportBtn();
+
+        // table 사이즈(width)가 기준 width와 같지 않을 경우, 출력을 위해 사이즈(width) 지정
+        if( parseInt($("#table01").width()) > 1050)
+        {
+            $("#table01").css("width", parseInt($("#table01").width()));
+        } else {
+            $("#table01").css("width", 1050);
+        }
+    });
+</script>
+</body>
+</html>
